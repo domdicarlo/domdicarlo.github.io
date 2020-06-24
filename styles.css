@@ -1,0 +1,700 @@
+/*Global styles*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 5rem 0;
+}
+
+h1 {
+    font-family: 'Bebas Neue'
+}
+
+/*header*/
+header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container{
+    width: 90%;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    height: 10rem;
+}
+
+.nav-brand{
+    width: 5rem;
+}
+
+.menu-icons i{
+    font-size: 3.5rem;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.close i{
+    color: #f04e52;
+}
+
+.nav-list{
+    font-family: 'Bebas Neue', sans-serif;
+    width: 25rem;
+    height: 100vh;
+    background-color: #d7d4ed;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: all 650ms ease-in-out;
+}
+
+.nav-list.active{
+    right: 0;
+}
+
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.nav-item{
+    margin: 1.5rem 0;
+}
+
+.nav-link{
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.7);
+}
+
+.logo {
+  min-width: 8rem;
+}
+
+/* hero */
+.hero {
+    /* font-family: 'Bebas Neue'; */
+    /* font-family: 'gastromond', sans-serif;     */
+    width: 100%;
+    height: 35rem;
+    /* background: linear-gradient(135deg, rgba(72,56,149,0.8) 0%, rgba(38, 204, 216, 0.64) 100%), url("images/header-bg.jpg") center no-repeat; */
+    background: linear-gradient(135deg,  rgba(73, 179, 198, 0.64) 0%, rgba(39, 134, 196, 0.66) 50%, rgba(72,56,149,0.66)  100%), url("images/header-bg.jpg") center no-repeat;
+    /* background: url("images/header-bg.jpg") center no-repeat; */
+    background-size: cover;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.navbar {
+    /* font-family: 'Bebas Neue'; */
+    /* font-family: 'gastromond', sans-serif;     */
+    width: 100%;
+    height: 10rem;
+    /* background: linear-gradient(135deg, rgba(72,56,149,0.8) 0%, rgba(38, 204, 216, 0.64) 100%), url("images/header-bg.jpg") center no-repeat; */
+    background: linear-gradient(135deg,  rgba(73, 179, 198, 0.64) 0%, rgba(39, 134, 196, 0.66) 50%, rgba(72,56,149,0.66)  100%), url("images/header-bg.jpg") center no-repeat;
+    /* background: url("images/header-bg.jpg") center no-repeat; */
+    background-size: cover;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+/* .hero::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4.7rem;
+    background: url("images/wave-small.png") center no-repeat;
+    background-size: cover;
+} */
+
+.main-message{
+    width: 100%;
+    color: #fafafa;
+
+    display: grid;
+    grid-template-columns: 1.7fr 0.3fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "title donate" 
+                         "subtitle donate";
+    margin-top: 7.5rem;
+    /* margin-bottom: 3rem; */
+    /* display: inline; */
+    /* text-transform: uppercase; */
+    /* transform: translateY(20%); */
+}
+
+.main-message #title {
+    font-family: 'Gastromond Trial', sans-serif;
+    font-size: 4rem;
+    margin: 0 0;
+    margin-bottom: 2rem;
+    /* margin-top: 8rem; */
+    /* margin-bottom: 2rem; */
+    text-transform: none;
+    grid-area: title;
+}
+
+.main-message #subtitle {
+    text-transform: none;
+    font-family: 'Bebas Neue', sans-serif;
+    display: inline-block;
+    grid-area: subtitle;
+}
+
+#donate-btn {
+    grid-area: donate;
+    /* margin-left: rem; */
+    /* height: 3rem; */
+}
+
+.btn-wrapper {
+    margin: 2rem 2rem;
+}
+
+.btn {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #f04e52;
+    border-radius: 2rem;
+    color: #fafafa;
+    border-color: red;
+    /* display: inline-block; */
+    padding: 1.5rem 2rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+    text-align: center;
+    /* margin-right: 3rem; */
+    font-size: 2.5rem;
+    font-style: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.btn:hover{
+    background-color: #ce587b;
+}
+
+.main-message btn {
+    flex: 1;
+}
+
+/*experience the outdoors*/
+.experience-outdoors {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.title-heading{
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    color: rgba(0,0,0,.7);
+}
+
+.title-heading h3{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.title-heading h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+}
+
+.title-heading p{
+    text-transform: none;
+}
+
+/* News and Events and Updates Subsection*/
+.news-events{
+    text-align: center;
+    color: rgba(0,0,0,.7);
+    background: white;
+    padding: 2rem;
+}
+
+.news-events h3{
+    font-size: 1.4rem;
+}
+
+.news-events h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+
+}
+
+.news-events-border-wrap {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(135deg,  #f04e52 0%, #f04e52 100%);
+}
+
+.news-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.news-grid-item{
+    height: 30rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.news-grid-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(39, 134, 196, 0.8) 0%, rgba(73, 179, 198, 0.64) 100%);
+    z-index: -1;
+}
+
+.event-one{
+    background: url("images/blm-george.jpg") center no-repeat;
+}
+
+.event-two{
+    background: url("images/capitol-hill.jpg") center no-repeat;
+}
+
+.event-three{
+    background: url("images/naacp.jpg") center no-repeat;
+}
+
+.news-grid-item i{
+    font-size: 4rem;
+    color: #f04e52;
+}
+
+.news-grid-item h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+/* social media icons */
+.social-icon-container {
+    margin: auto;
+    text-align: center;
+}
+
+.social-icon-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    width: 100px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*social-medias*/
+.social-media{
+    width: 100%;
+    height: 25rem;
+    background-size: cover;
+    position: relative;
+    display: inline-block
+}
+
+/* .social-media{
+    width: 100%;
+    color: #fafafa;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+} */
+/* 
+.social-media-text-box{
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.social-media-text-box i{
+    position: absolute;
+    top: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: #f04e52;
+    opacity: .5;
+    z-index: -1;
+}
+
+.social-media-customer img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    border: 3px solid #f04e52;
+}
+
+/*Begin adventures*/
+/* .adventure-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.adventure-grid-item p{
+    color: rgba(0,0,0,0.7);
+}  */
+
+.partnership {
+    /* padding: 6rem 2rem; */
+    /* height: 10rem;
+    margin: auto; */
+    /* background: linear-gradient(135deg, rgba(73, 179, 198, 0.64) 0%, rgba(72,56,149,0.8)  100%), url("images/women_politics_test_2.png") center no-repeat; */
+    /* background:  linear-gradient(135deg, rgba(73, 179, 198, 0.64) 0%, rgba(72,56,149,0.8)  100%), url("images/Partner-with-us.png") center no-repeat; */
+    /* background: linear-gradient(135deg,  rgba(73, 179, 198, 0.64) 0%, rgba(39, 134, 196, 0.66) 50%, rgba(56,95,173,0.66) 75%, rgba(72,56,149,0.66)  100%), url("images/women_politics_test_2.png") center no-repeat; */
+    /* background: linear-gradient(135deg,  rgba(73, 179, 198, 0.64) 0%, rgba(39, 134, 196, 0.66) 100% ), url("images/women_politics_test_2.png") center no-repeat; */
+    /* color: white;
+    display: flex;
+
+    flex-direction: row; */
+    /* align-content: space-between; */
+
+    width: 100%;
+    display: block;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.partnership img {
+    display: block;
+}
+
+.partnership::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(39, 134, 196, 0.8) 0%, rgba(73, 179, 198, 0.64) 100%);
+    z-index: -1;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -75%);
+}
+
+footer {
+    background-color: #f04e52;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.7rem 0;
+}
+
+footer a:link {
+    color: white;
+    text-decoration: underline;
+}
+footer a:visited {
+    color: white;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Gastromond Trial";
+    src: url("fonts/gastromond/Gastromond.otf") format("otf");
+    src: url("fonts/gastromond/Gastromond.ttf") format("ttf");
+    src: url("fonts/gastromond/Gastromond.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("fonts/bebas_neue/bebasneue-regular-webfont.woff") format("woff");
+  src: url("fonts/bebas_neue/bebasneue-regular-webfont.woff2") format("woff2");
+}
+
+/* @font-face {
+    font-family: "Gastromond Tria";
+    /* src: url("fonts/JTD_Gastromond_Italic_Trial/Gastromond-Trial-Italic.otf") format("otf"); */
+/* } */ 
+
+/*Media queries*/
+@media screen and (min-width: 350px){
+    .main-message{
+        transform: translateY(40%);
+    }
+}
+
+/* @media screen and (min-width: 470px){
+    .hero::before{
+        height: 9.4rem;
+        background: url("images/wave-medium.png");
+        background-size: cover;
+    }
+
+    .testimonials::before{
+        height: 9.4rem;
+        background: url("images/wave-medium-reversed.png");
+        background-size: cover;
+    }
+} */
+
+/* Fix for navbar */
+@media screen and (min-width: 1280px){
+    header{
+        height: 8rem;
+    }
+
+    .nav-brand{
+        width: 3.5rem;
+    }
+
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .menu-icons{
+        display: none;
+    }
+
+    .nav-item{
+        margin: 0 2.5rem;
+    }
+
+    .nav-link,
+    .current{
+        color: #fafafa;
+        position: relative;
+        font-size: 1.9rem;
+    }
+
+    .nav-link::before,
+    .current::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background-color: #f04e52;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+
+    .current::before{
+        transform: scaleX(1);
+    }
+
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+} 
+
+@media screen and (min-width: 950px){
+    /* .hero {
+        height: 22.7rem;
+        background: url("images/wave-large.png");
+        background-size: cover;
+    } */
+
+}
+
+/* @media screen and (min-width: 1200px){
+    .hero{
+        height: 75vh;
+    }
+}  */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px;
+  grid-template-areas: "main-content donation-area";
+}
+
+.main-content { grid-area: main-content; }
+
+.donation-area { 
+  grid-area: donation-area; 
+  text-align: center;
+  margin-left: 2rem;
+  max-height: 20rem;
+}
+
+.donation-area-text {
+  border: solid;
+  border-color: #f04e52;
+  text-align: left;
+  padding: 2rem 2rem;
+  font-size: 0.5rem;
+}
+
+
+.news-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.news-grid-item{
+    height: 30rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.news-grid-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(39, 134, 196, 0.8) 0%, rgba(73, 179, 198, 0.64) 100%);
+    z-index: -1;
+}
+
+.people-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.people-grid-item{
+    height: 6rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    background-color: red;
+}
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible-active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible-content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+
+}
+
+.collapse-button {
+    display: inline;
+
+}
+
+.collapse-button h1 {
+    display: inline;
+}

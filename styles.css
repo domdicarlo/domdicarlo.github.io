@@ -540,6 +540,15 @@ footer a:hover {
     src: url("fonts/Montserrat-Bold/Montserrat-Bold.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "Nunito-Bold";
+    src: url("fonts/Nunito-Bold/Nunito-Bold.eot") format("eot");
+    src: url("fonts/Nunito-Bold/Nunito-Bold.svg") format("svg");
+    src: url("fonts/Nunito-Bold/Nunito-Bold.ttf") format("ttf");
+    src: url("fonts/Nunito-Bold/Nunito-Bold.woff") format("woff");
+    src: url("fonts/Nunito-Bold/Nunito-Bold.woff2") format("woff2");
+}
+
 /* @font-face {
     font-family: "Gastromond Tria";
     /* src: url("fonts/JTD_Gastromond_Italic_Trial/Gastromond-Trial-Italic.otf") format("otf"); */
@@ -701,30 +710,30 @@ footer a:hover {
     /* grid-gap: 1rem 1rem; */
     margin: auto;
     text-align: center;
-    justify-content: center;
-    /* line-height: 2rem; */
+    line-height: 2rem;
 }
 
 .people-grid-item {
+    line-height: 1.5rem;
     margin: auto;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
     height: 9rem;
     width: 9rem;
     position: relative;
     /* display: flex;
     flex-direction: column; */
-    justify-content: center;
     cursor: pointer;
-    z-index: 1;
     display: inline-block;
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
 .people-grid-item p {
-    margin-top: 0.5rem;
     font-size: 1rem;
-    font-weight: bold;
+}
+
+.people-grid-name {
+    font-family: "Nunito-Bold"
 }
 
 
@@ -762,4 +771,72 @@ footer a:hover {
 
 .collapse-button h1 {
     display: inline;
+}
+
+
+/* Modal Stuff */
+
+/* The Modal (background) */
+.modal-container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 50%;
+  top: 50%;
+  width: 50%; 
+  height: 75%; 
+  margin-left: -25%;
+  margin-top: -18.75% ;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,1); /* Black w/ opacity */
+  /* border: 5px solid black; */
+}
+
+.modal img {
+    height: 20rem;
+    width: 20rem;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; 
+  padding: 80px;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content p {
+  text-align: left;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.modal span {
+    font-family: "Nunito-Bold";
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
